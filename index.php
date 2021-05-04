@@ -59,14 +59,36 @@ $faqs = [
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
-    <?php foreach ($faqs as $faq) : ?>
-        <h1><?= $faq["question"] ?></h1>
-        <p><?= $faq["answer"] ?></p>
-    <?php endforeach; ?>
+    <header>
+        <div class="logo_title">
+            <div class="logo_container">
+                <img src="googlelogo_clr_74x24px.svg" alt="">
+            </div>
+            <h1>Privacy e termini</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Introduzone</a></li>
+                <li><a href="#">Norme sulla privacy</a></li>
+                <li><a href="#">Termini di servizio</a></li>
+                <li><a href="#">Tecnologie</a></li>
+                <li class="active"><a href="#">Domande frequenti</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="text_content">
+        <?php foreach ($faqs as $faq) : ?>
+            <h2><?= $faq["question"] ?></h2>
+            <p><?= $faq["answer"] ?></p>
+        <?php endforeach; ?>
+    </div>
 </body>
 
 </html>
